@@ -7,15 +7,15 @@ import { Link } from 'react-router-dom'; // 1. อย่าลืม import Link
   { id: 1, name: "Abstract Line Shirt", price: "$120", img: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=400" },
   { id: 2, name: "Classic White Tee", price: "$45", img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=400" },
   { id: 3, name: "Graphic Print Oversize", price: "$89", img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80&w=400" },
-  { id: 4, name: "Beige Knit Polo", price: "$110", img: "https://images.unsplash.com/photo-1620012253295-c15cc3fe5d3d?auto=format&fit=crop&q=80&w=400" },
-  { id: 5, name: "Classic White Tee", price: "$45", img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=400" },
-  { id:6, name: "Graphic Print Oversize", price: "$89", img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80&w=400" },
+  { id: 4, name: "Beige Knit Polo", price: "$110", img: "https://www.chanel.com/puls-img/c_limit,w_1920/q_auto:good,dpr_auto,f_auto/1759155329614-homepage-fashion-one-desktop-18_2510x5760.jpg" },
+  { id: 5, name: "Classic White Tee", price: "$45", img: "https://www.chanel.com/puls-img/c_limit,w_1920/q_auto:good,dpr_auto,f_auto/1757509136328-homepage-fashion-one-desktop-17_2510x5760.jpg" },
+  { id:6, name: "Graphic Print Oversize", price: "$89", img: "https://www.chanel.com/puls-img/c_limit,w_1920/q_auto:good,dpr_auto,f_auto/1742562149976-homepagecorpoonedesktopjpg_3240x5760.jpg" },
   ];
 
   const collections = [
-  { id: 1, title: "Summer Vibes", img: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&q=80&w=500" },
-  { id: 2, title: "Urban Street", img: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=500" },
-  { id: 3, title: "Formal Casual", img: "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&q=80&w=500" },
+  { id: 1, title: "MEN", img: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&q=80&w=500" },
+  { id: 2, title: "WOMEN", img: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=500" },
+  { id: 3, title: "KID", img: "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&q=80&w=500" },
   ];
 function Home({ onLogout }) {
   
@@ -38,7 +38,7 @@ function Home({ onLogout }) {
         <div className='hero-text'>
           <h1>NEW <br/>COLLECTION</h1>
           <p>Summer <br/>2025</p>
-          <button className='cta-btn'>Go To Shop →</button><span><button>s</button><button>d</button></span>
+          <button className='cta-btn'>Go To Shop →</button>
         </div>
         <div className='hero-image'>
           <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=800" alt='Hero Modal'></img>
@@ -58,7 +58,7 @@ function Home({ onLogout }) {
             <br/>
             THIS WEEK<span style={{ fontSize: '1.2rem', color: '#666', verticalAlign: 'top', marginLeft:'15px '}}>(120)</span>
           </h2> 
-          <span className='italic-text'>See all</span>
+          <a href='#' style={{color: '#b1b0b0'}}><span className='italic-text'>See all</span></a>
           </div>
 
           <div className='product-grid'>
@@ -78,7 +78,7 @@ function Home({ onLogout }) {
 
         <section className='section-container bg-light'>
             <div className="hero-text">
-              <h2>XIV<br/>COLLECTIONS<br/>23-34</h2>
+              <h2>XIV<br/>COLLECTIONS<br/>25-26</h2>
             </div>
             <div className="collection-grid">
            {collections.map((col) => (
@@ -100,11 +100,31 @@ function Home({ onLogout }) {
            </div>
         </section>
 
-        <footer className="footer">
-        <p>© 2025 XIV QR Fashion. All rights reserved.</p>
-      </footer>
+        <footer className="footer-section">
+        <div className="footer-content">
+          <div className="footer-col contact-col">
+            <h3 >Info</h3>
+            <h5 style={{ color: '#cccccc' }}> 
+                ABOUT/<br/>CONTRACTS
+            </h5>
+          </div>
+          <div className="footer-col center-col">
+             <div className="footer-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=400&auto=format&fit=crop&q=60" alt="Brand Aesthetics" />
+                <span className="brand-overlay">XIV</span>
+             </div>
+          </div>
+        </div>
+
+        <div className="footer-col empty-col"></div>
+        <div className="footer-bottom">
+          <p style={{color:'white'}}>© 2025 — copyright</p>
+        </div>
+
+        </footer>
     </div>
   );
 }
 
 export default Home;
+

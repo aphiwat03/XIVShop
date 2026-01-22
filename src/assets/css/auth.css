@@ -2,7 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .auth-wrapper {
@@ -22,8 +23,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* เงาฟุ้งๆ ให้ดูลอยขึ้นมา */
   width: 100%;
   max-width: 700px; /* ความกว้างสูงสุดไม่เกิน 400px */
-  height: 100%;
-  max-height: 600px;
+  height: auto;
 }
 
 .auth-box h2 {
@@ -58,14 +58,14 @@
 
 .input-group input:focus {
   outline: none;
-  border-color: #858586; 
+  border-color: #858586;
   box-shadow: 0 0 0 3px rgba(118, 118, 125, 0.1);
 }
 
 .auth-btn {
   width: 100%;
   padding: 12px;
-  background-color: #000000; 
+  background-color: #000000;
   color: white;
   border: none;
   border-radius: 6px;
@@ -80,18 +80,18 @@
   background-color: #1e1e1e;
 }
 
-.label-input{
-    display: flex;
-    justify-content: start;
+.label-input {
+  display: flex;
+  justify-content: start;
 }
 
 /* คลาสแม่ (.font) */
 .font {
-  padding-top: 30px; 
+  padding-top: 30px;
   display: flex;
-  flex-direction: column; 
-  align-items: start; 
-  gap: 15px; 
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
 }
 /* ปรับแต่ง Tag <a> ทั้งหมดที่อยู่ใน .font */
 .font a {

@@ -11,7 +11,7 @@
   min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-main);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden; /* ป้องกันเลื่อนซ้ายขวา */
 }
 
@@ -20,12 +20,49 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 4rem;
-  position: sticky;
-  top: 0;
-  background-color: rgba(253, 253, 253, 0.95);
-  z-index: 100;
+  padding: 20px 40px;
+  background: white;
   border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  flex: 0 auto;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  gap: 3px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  font-style: italic;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #000;
+}
+
+.nav-links a:hover {
+  color: #666;
 }
 
 .logo {
@@ -34,25 +71,15 @@
   letter-spacing: 2px;
 }
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.nav-actions {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
 .icon-btn {
   background: none;
   border: none;
-  font-size: 1.3rem;
   cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
 }
 
 .logout-btn {
@@ -70,6 +97,7 @@
   padding: 2rem 4rem;
   min-height: 80vh;
   align-items: center;
+  margin-top: 40px;
 }
 
 .hero-text {
@@ -96,7 +124,7 @@
 
 .cta-btn {
   padding: 12px 24px;
-  background: #D9D9D9;
+  background: #d9d9d9;
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -145,7 +173,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem;
-  overflow-x:hidden ;
+  overflow-x: hidden;
 }
 
 .product-card {
@@ -187,15 +215,15 @@
   gap: 1rem;
 }
 
-.collection-header{
+.collection-header {
   display: flex;
   justify-content: space-between;
   align-items: end;
   margin-bottom: 2rem;
 }
 
-.colleciton-header h2{
-    font-style: italic;
+.colleciton-header h2 {
+  font-style: italic;
   font-weight: 300;
 }
 
@@ -235,15 +263,16 @@
 }
 /* --- Footer --- */
 .footer-section {
-  background: linear-gradient(rgba(164, 162, 162, 0.96), rgba(164, 162, 162, 0.96)), 
-              url('ernest-karchmit-ZcDjyPNLQ8w-unsplash.jpg');
-  background-size: cover;   
+  background:
+    linear-gradient(rgba(164, 162, 162, 0.96), rgba(164, 162, 162, 0.96)),
+    url("ernest-karchmit-ZcDjyPNLQ8w-unsplash.jpg");
+  background-size: cover;
   background-position: center;
   color: #fff;
   padding-top: 4rem;
 }
 
-.footer-content{
+.footer-content {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   gap: 4rem;
@@ -265,12 +294,12 @@
 }
 .center-col {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
-.center-col{
+.center-col {
   text-align: center;
 }
-.footer-image-warpper{
+.footer-image-warpper {
   width: 150px;
   height: 150px;
   overflow: hidden;
@@ -286,7 +315,7 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1); /* เส้นขีดคั่นจางๆ */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* เส้นขีดคั่นจางๆ */
   text-align: center;
   padding: 1.5rem;
   font-size: 0.8rem;
@@ -299,15 +328,15 @@
     flex-direction: column-reverse;
     padding: 2rem;
   }
-  
+
   .hero-text h1 {
     font-size: 3rem;
   }
-  
+
   .collection-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .collage-grid {
     flex-direction: column;
     height: auto;
@@ -317,7 +346,7 @@
   .empty-col {
     display: none;
   }
-  
+
   .footer-content {
     grid-template-columns: 1fr; /* เรียงลงมาเป็นแนวตั้ง */
     text-align: center;

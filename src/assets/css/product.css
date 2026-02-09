@@ -1,8 +1,7 @@
-/* --- Global & Layout --- */
 .container {
-  background-color: #f9f9f9; /* ปรับสีพื้นหลังให้อ่อนลงเล็กน้อย */
+  background-color: #f9f9f9;
   min-height: 100vh;
-  font-family: "Arial", sans-serif; /* หรือเปลี่ยนเป็น 'Inter' ถ้า import มา */
+  font-family: "Arial", sans-serif;
   color: #333;
 }
 
@@ -12,26 +11,6 @@
   margin: 0 auto;
   padding: 40px;
   gap: 50px;
-}
-
-/* --- Navbar --- */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: white;
-  border-bottom: 1px solid #eee;
-}
-
-.nav-links {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-  font-style: italic;
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
 }
 
 .cart-btn {
@@ -48,6 +27,7 @@
 /* --- Sidebar (Filters) --- */
 .sidebar {
   width: 250px;
+  padding-bottom: 20px;
   flex-shrink: 0;
 }
 
@@ -78,6 +58,84 @@
   background-color: black;
   color: white;
   border-color: black;
+}
+
+/* รายการ Filter ทั่วไป */
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Color Circles */
+.color-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.color-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.color-circle:hover {
+  transform: scale(1.2);
+}
+
+/* Price Slider */
+.price-slider {
+  width: 100%;
+  accent-color: #000;
+}
+
+.price-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #888;
+}
+
+/* Tag Pills */
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag-pill {
+  font-size: 11px;
+  padding: 4px 10px;
+  background: #f0f0f0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.tag-pill:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Ratings */
+.stars {
+  color: #f39c12;
+  margin-left: 5px;
+}
+
+.rating-text {
+  font-size: 12px;
+  color: #666;
 }
 
 /* --- Product Area --- */
@@ -131,7 +189,7 @@
 /* Product Grid (ที่คุณปรับมาแล้ว) */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 30px;
   flex: 1;
 }
@@ -175,4 +233,39 @@
   font-style: italic;
   font-size: 11px;
   margin-bottom: 4px;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.page-btn {
+  background: none;
+  border: 1px solid #000;
+  padding: 8px 16px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+  background-color: #000;
+  color: #fff;
+}
+
+.page-btn:disabled {
+  border-color: #e5e5e5;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-size: 13px;
+  font-weight: bold;
 }
